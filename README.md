@@ -13,3 +13,9 @@ behind this project.
 # Build and Test
 
 # Contribute
+
+```bash
+$ git clone ...
+$ cd ...
+$ pre-commit install
+```
