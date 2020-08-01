@@ -22,7 +22,7 @@ setup(
     version=__version__,
     author='ctgk',
     author_email='r1135nj54w@gmail.com',
-    description='Python project boilerplate',
+    description='pyboilerplate',
 
 
     python_requires='',
