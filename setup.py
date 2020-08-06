@@ -24,8 +24,7 @@ setup(
     author_email='r1135nj54w@gmail.com',
     description='pyboilerplate',
 
-
-    python_requires='',
+    python_requires='>=3',
     install_requires=install_requires,
     extras_require={
         'develop': develop_requires,

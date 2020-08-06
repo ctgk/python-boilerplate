@@ -18,7 +18,7 @@ repos:
         name: Check Python format
         entry: flake8
         language: system
-        types: [file, python]
+        types: [python]
     -   id: assert_ascii
         language: system
         name: Check file encoding
