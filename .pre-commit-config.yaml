@@ -22,8 +22,8 @@ repos:
     -   id: assert_ascii
         language: system
         name: Check file encoding
-        entry: bash -c 'for file in "$@"; do file -i $file | grep -q ascii; done'
-        types: [file]
+        entry: bash -c 'for file in "$@"; do file -i $file | grep -q "ascii\|binary"; done' --
+        types: [text]
     -   id: unittest
         name: Run Python unittests
         language: python
