@@ -12,11 +12,24 @@ behind this project.
 
 # Build and Test
 
-# Contribute
+Run following commands to check tests
 
 ```bash
-$ git clone ...
-$ cd ...
-$ pre-commit install
-$ pre-commit install -t pre-push
+git clone ...
+cd ...
+pip install -e .[develop]
+pytest --doctest-modules
+```
+
+# Contribute
+
+Make sure to run following commands before contributing.
+They install git hook scripts to avoid improper commits or pushes.
+
+```bash
+git clone ...
+cd ...
+pip install -e .[develop]
+pre-commit install
+pre-commit install -t pre-push
 ```
