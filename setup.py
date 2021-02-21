@@ -1,16 +1,38 @@
+"""setup module.
+
+See:
+https://packaging.python.org/guides/distributing-packages-using-setuptools/
+https://github.com/pypa/sampleproject/blob/main/setup.py
+"""
+
+import pathlib
+
 from setuptools import find_packages, setup
 
 
-__version__ = '0.0.1'
-
+long_description = pathlib.Path(__file__).parent.joinpath(
+    'README.md',
+).read_text(encoding='utf-8')
 
 install_requires = []
 develop_requires = [
-    'autopep8',
-    'flake8',
-    'pep8-naming',
     'pre-commit',
     'pytest',
+
+    # format
+    'autopep8',
+    'flake8',
+    'flake8-absolute-import',
+    'flake8-broken-line',
+    'flake8-builtins',
+    'flake8-commas',
+    'flake8-docstrings',
+    'flake8-import-order',
+    'flake8-multiline-containers',
+    'flake8-mutable',
+    'pep8-naming',
+
+    # documentation
     'sphinx',
     'sphinx_rtd_theme',
     'livereload',
@@ -19,10 +41,13 @@ develop_requires = [
 
 setup(
     name='pyboilerplate',
-    version=__version__,
+    version='0.0.1',
     author='ctgk',
     author_email='r1135nj54w@gmail.com',
     description='pyboilerplate',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url='https://github.com/ctgk/python-boilerplate',
 
     packages=find_packages(
         exclude=('tests', 'tests.*'),
