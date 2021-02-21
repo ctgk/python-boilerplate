@@ -5,5 +5,10 @@ def pyboilerplate() -> str:
     -------
     str
         A string
+
+    Examples
+    --------
+    >>> pyboilerplate()
+    'pyboilerplate'
     """
     return 'pyboilerplate'
