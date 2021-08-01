@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v3.2.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -23,7 +23,7 @@ repos:
     -   id: assert_ascii
         language: system
         name: Check file encoding
-        entry: bash -c 'for file in "$@"; do file -i $file | grep -q "ascii\|binary"; done' --
+        entry: bash -c 'for file in "$@"; do file --mime-encoding $file | grep -q "ascii\|binary"; if [ $? != 0 ]; then echo $file; exit 1; fi; done' --
         types: [text]
     -   id: unittest
         name: Run Python unittests
