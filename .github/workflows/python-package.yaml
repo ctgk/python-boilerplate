@@ -18,7 +18,7 @@ jobs:
         python-version: [3.6, 3.7, 3.8, 3.9]
         command: [
           "pip install .; pip install pytest; pytest --doctest-modules",
-          "pip install .[develop]; SKIP=no-commit-to-branch pre-commit run -a"
+          "pip install -e .[develop]; SKIP=no-commit-to-branch pre-commit run -a"
         ]
 
     steps:
