@@ -15,11 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: ['3.7', '3.8', '3.9', '3.10', '3.11']
         command: [
           "pip install .; pip install pytest; pytest --doctest-modules",
           "pip install -e .[develop]; SKIP=no-commit-to-branch pre-commit run -a"
         ]
+      fail-fast: false
 
     steps:
     - uses: actions/checkout@v2
