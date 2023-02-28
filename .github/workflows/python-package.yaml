@@ -20,6 +20,7 @@ jobs:
           "pip install .; pip install pytest; pytest --doctest-modules",
           "pip install -e .[develop]; SKIP=no-commit-to-branch pre-commit run -a"
         ]
+      fail-fast: false
 
     steps:
     - uses: actions/checkout@v2
